@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { createElement } from "./utils.js";
 import "./styles.css";
 
@@ -10,8 +10,6 @@ import "./styles.css";
 function App({ store }) {
   const list = store.getState().list;
 
-  const [codeCount, setCodeCount] = useState(list.length);
-
   return (
     <div className="App">
       <div className="App-head">
@@ -20,8 +18,7 @@ function App({ store }) {
       <div className="App-controls">
         <button
           onClick={() => {
-            store.addItem(codeCount); // Передаю переменную в качестве кода и после добавления увеличиваю её на единицу
-            setCodeCount(codeCount + 1);
+            store.addItem();
           }}
         >
           Добавить
