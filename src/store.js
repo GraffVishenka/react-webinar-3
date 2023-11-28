@@ -73,7 +73,9 @@ class Store {
           // выделяю или убираю выделение элемента по его коду
           item.selected = !item.selected;
           // Добавляю счётчик выделений
-          item.focus += 1;
+          if (item.selected){
+            item.focus += 1;
+          }
         }
         if (item.code !== code) item.selected = false; // Убираю выделения у всех элементов, кроме выбранного
         return item;
