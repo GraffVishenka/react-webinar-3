@@ -1,0 +1,11 @@
+.ActionBar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.ActionBar-info {
+  font-weight: 600;
+  margin-right: 15px;
+  padding-left: 10px;
+}
